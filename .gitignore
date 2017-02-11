@@ -3,3 +3,5 @@
 
 data/sanders/rawdata/*.json
 !data/sanders/rawdata/.gitkeep
+data/semeval15/rawdata/*.json
+!data/semeval15/rawdata/.gitkeep
