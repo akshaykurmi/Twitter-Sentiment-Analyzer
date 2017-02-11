@@ -1,6 +1,8 @@
 .idea
 .DS-Store
 
+__pycache__
+
 data/sanders/rawdata/*.json
 !data/sanders/rawdata/.gitkeep
 data/semeval15/rawdata/*.json
