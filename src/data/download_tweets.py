@@ -13,7 +13,7 @@ def print_message(file_id, done, remaining, skipped):
 
 
 def twitter_keys():
-    return json.load(open("../data/twitter_keys.json", "rt"))
+    return json.load(open("../../data/twitter_keys.json", "rt"))
 
 
 def twitter_api(keys):
@@ -54,8 +54,8 @@ def download_tweets(keys, done_count, total_tweets, tweet_list, raw_data_path):
 
 def download_sanders():
     file_list = ["corpus.csv"]
-    done_count, tweet_list, total_tweets = current_download_status("../data/sanders/rawdata/",
-                                                                   "../data/sanders/",
+    done_count, tweet_list, total_tweets = current_download_status("../../data/sanders/rawdata/",
+                                                                   "../../data/sanders/",
                                                                    file_list,
                                                                    2,
                                                                    ",")
@@ -63,7 +63,7 @@ def download_sanders():
                     done_count,
                     total_tweets,
                     tweet_list,
-                    "../data/sanders/rawdata/")
+                    "../../data/sanders/rawdata/")
 
 
 def download_semeval():
@@ -83,8 +83,8 @@ def download_semeval():
                  'twitter-train-full-B.tsv',
                  'twitter-trial-CD.csv',
                  'twitter_full_cleansed.csv']
-    done_count, tweet_list, total_tweets = current_download_status("../data/semeval15/rawdata/",
-                                                                   "../data/semeval15/",
+    done_count, tweet_list, total_tweets = current_download_status("../../data/semeval15/rawdata/",
+                                                                   "../../data/semeval15/",
                                                                    file_list,
                                                                    0,
                                                                    "\t")
@@ -92,4 +92,4 @@ def download_semeval():
                     done_count,
                     total_tweets,
                     tweet_list,
-                    "../data/semeval15/rawdata/")
+                    "../../data/semeval15/rawdata/")
