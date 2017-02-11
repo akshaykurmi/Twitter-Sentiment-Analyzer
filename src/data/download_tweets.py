@@ -1,7 +1,10 @@
 import csv
 import json
 import os
+
 import tweepy
+
+from utils import twitter_keys, twitter_api
 
 
 def print_message(file_id, done, remaining, skipped):
@@ -10,17 +13,6 @@ def print_message(file_id, done, remaining, skipped):
           "| Remaining:", remaining,
           "| Skipped - ", skipped,
           flush=True)
-
-
-def twitter_keys():
-    return json.load(open("../../data/twitter_keys.json", "rt"))
-
-
-def twitter_api(keys):
-    auth = tweepy.OAuthHandler(keys["consumer_key"], keys["consumer_secret"])
-    auth.set_access_token(keys["access_token"], keys["access_secret"])
-    api = tweepy.API(auth)
-    return api
 
 
 def current_download_status(raw_data_path, input_file_path, file_list, index, delimiter):
